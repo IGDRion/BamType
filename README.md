@@ -1,17 +1,8 @@
-Oral presentation link : https://uniren1-my.sharepoint.com/personal/victor_lebars_etudiant_univ-rennes1_fr/Documents/presentation_BIS.pptx?web=1
-
-Internship report link : https://docs.google.com/document/d/1DTVfsWx6Uh07FXGXS_Rg1PKSJQ059CQErE2srerdEpM/edit?usp=sharing
-
-
-# M2 IGDR Internship
-
-## Victor Le Bars
-
 ## Scripts
 This repository contains the scripts used to make quality control of the annotation of new transcripts. BamType.R is used to extract caracteristics of reads/alignment of a LR-RNAseq sample. The other scripts are used to generate figures with the output of BamType. The README.md of this directory gives more information about all the scripts presented.
 
 ## Plots
-The plots directory contains all the figures generated during the analyses
+The plots directory contains all the figures generated during the analyses.
 
 # BamType
 
@@ -43,7 +34,7 @@ Download all R packages needed for BamType :
 1. Preparation of BAM files
 
 Before using BamType, you need to create a new alignment file (BAM) for your sample:
-- Create a multifasta that contains known AND new transcripts sequences : extract all exons from the extended annotation (example on how to do this : [**gtf_exon.sh**](https://gitlab.com/bioinfog/nanopore/general/stagesm2_2023/-/blob/main/victor/scripts/gtf_exon.sh)) and create the multifasta (you can use *gffreads*, example on how to do this : [**gtf2fasta.sh**](https://gitlab.com/bioinfog/nanopore/general/stagesm2_2023/-/blob/main/victor/scripts/gtf_exon.sh)).
+- Create a multifasta that contains known AND new transcripts sequences : extract all exons from the extended annotation (example on how to do this : [**gtf_exon.sh**](https://github.com/IGDRion/BamType/blob/master/scripts/gtf_exon.sh)) and create the multifasta (you can use *gffreads*, example on how to do this : [**gtf2fasta.sh**](https://github.com/IGDRion/BamType/blob/master/scripts/gtf2fasta.sh)).
 - Use an alignment program (*minimap2* (2.24) was used for the tests) to align fastq sequences of your sample to the multifasta just created.
 
 
@@ -87,7 +78,7 @@ Two output directories are created : **csv/** and **plots/**
     - proportions of biotypes in the known vs novel transcripts
 
 Scripts using the .csv files (**primary_data.csv** and **subsample.csv**) to generate figures are shown as example in the "script/" directory of this Gitlab repository.
-To merge all the subsamples of the analysis and make comparisons across samples, **merge_sample_bamtype.R**(https://gitlab.com/bioinfog/nanopore/general/stagesm2_2023/-/blob/main/victor/scripts/merge_sample_bamtype.R) was used.
+To merge all the subsamples of the analysis and make comparisons across samples, **merge_sample_bamtype.R**(https://github.com/IGDRion/BamType/blob/master/scripts/merge_sample_bamtype.R) was used.
 
 ## Example
 
@@ -99,7 +90,7 @@ BamType can cause *out-of-memory* errors: be sure to allocate enough ressources 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://gitlab.com/bioinfog/nanopore/general/stagesm2_2023/-/blob/main/victor/LICENSE)
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/IGDRion/BamType/blob/master/LICENSE)
 
 ## Acknowledgments
 
