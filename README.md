@@ -40,17 +40,7 @@ Before using BamType, you need to create a new alignment file (BAM) for your sam
 
 2. Launch & Input
 `
-Rscript Bamtype.R \\\
-
---type \\\
-
---bam \\\
-
---gtf \\\
-
---seqsum \\\
-
---output \\\  
+Rscript Bamtype.R --type --bam --gtf --seqsum --output  
 `
 
 - *--type* type of sequencing: cdna or rna
