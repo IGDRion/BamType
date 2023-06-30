@@ -39,6 +39,7 @@ Before using BamType, you need to create a new alignment file (BAM) for your sam
 
 
 2. Launch & Input
+
 `
 Rscript Bamtype.R --type --bam --gtf --seqsum --output  
 `
@@ -72,7 +73,9 @@ To merge all the subsamples of the analysis and make comparisons across samples,
 
 ## Example
 
+`
 Rscript Bamtype.R --type="cdna" --bam="path/to/501Mel_1-3.bam" --gtf="path/to/extended_annotation.gtf" --seqsum="path/to/501Mel_1-3_seqsum.txt" --output="bamtype_results/"
+`
 
 ## Troubleshooting
 
